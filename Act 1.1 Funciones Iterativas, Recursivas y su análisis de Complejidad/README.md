@@ -2,13 +2,14 @@
 
 **Análisis de complejidad temporal**
 
-El algoritmo 
+El algoritmo ocupa un ciclo "for" para ir acumulando la suma hasta el numero que se le indique. Es por ello que la complejidad consiste de O(n) (la cual es el peor de los casos), también conocida como lineal.  
 
 #suma Recursiva
 
 **Análisis de complejidad temporal**
 
-El algoritmo 
+ La complejidad temporal del algoritmo de suma con recursion en este caso es lineal o 
+  O(n). Considerando que el algoritmo esta dentro de un ciclo y se considera el peor de los casos.
 
 
 #suma Directa
