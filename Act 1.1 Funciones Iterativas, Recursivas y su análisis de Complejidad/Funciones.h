@@ -23,10 +23,10 @@ int funciones::sumaIterativa{
 }
 
 int funciones::sumaRecursiva{
- if (n<=1){
+ if (numero<=1){
    return 1;
  } else{
-   return n+sumaRecursiva(n-1);
+   return numero+sumaRecursiva(numero-1);
  }
 }
 
