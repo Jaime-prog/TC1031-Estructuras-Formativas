@@ -1,20 +1,19 @@
 #ifndef FUNCIONES_H
 #define FUNCIONES_H
 
-class funciones{
+class Funciones{
 public:
-
-funciones();
-funciones(int n);
+Funciones();
+Funciones(int n);
 
 int sumaIterativa(int n);
 int sumaRecursiva(int n);
-int sumaDirecta(int n):
-
+int sumaDirecta(int n);
 };
 
+Funciones::Funciones(){}
 
-int funciones::sumaIterativa (int n){
+int Funciones::sumaIterativa (int n){
   int resultado = 0;
 	for (int i = 1; i <= n; i++) {
 		resultado=resultado+i;
@@ -22,19 +21,16 @@ int funciones::sumaIterativa (int n){
 	return resultado;
 }
 
-int funciones::sumaRecursiva (int n){
- if (numero<=1){
-   return 1;
+int Funciones::sumaRecursiva (int n){
+ if (n==0){
+   return 0;
  } else{
-   return numero+sumaRecursiva(numero-1);
+   return n+sumaRecursiva(n-1);
  }
 }
 
-
-int funciones::sumaDirecta (int n){
-result =0;
-result= (n*(n+1))/2;
-return result;
+int Funciones::sumaDirecta (int n){
+return (n*(n+1))/2;
 }
 
 #endif
