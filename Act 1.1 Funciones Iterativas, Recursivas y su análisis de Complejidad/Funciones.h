@@ -14,7 +14,7 @@ int sumaDirecta(int n):
 };
 
 
-int funciones::sumaIterativa{
+int funciones::sumaIterativa (int n){
   int resultado = 0;
 	for (int i = 1; i <= n; i++) {
 		resultado=resultado+i;
@@ -22,7 +22,7 @@ int funciones::sumaIterativa{
 	return resultado;
 }
 
-int funciones::sumaRecursiva{
+int funciones::sumaRecursiva (int n){
  if (numero<=1){
    return 1;
  } else{
@@ -31,7 +31,7 @@ int funciones::sumaRecursiva{
 }
 
 
-int funciones::sumaDirecta{
+int funciones::sumaDirecta (int n){
 result =0;
 result= (n*(n+1))/2;
 return result;
