@@ -1,5 +1,4 @@
 
-
 #ifndef Graph_H_
 #define Graph_H_
 
@@ -11,6 +10,8 @@
 #include <stack>
 #include <list>
 #include <algorithm>
+#include<bits/stdc++.h>
+
 
 using namespace std;
 
@@ -36,7 +37,7 @@ public:
 		void print_path(vector<vector<int>>&,int ,int);
 		bool contains(list<int>, int);
 		void sortAdjList();
-		void loadGraphList (int, int);
+		void loadGraphList (string, int, int);
 		
 };
 
@@ -60,9 +61,9 @@ void Graph::addEdgeAdjMatrix(int u, int v){
 	adjMatrix[v*nodes+u] = 1;
 	edgesMat++;
 }
-
-void Graph::loadGraphList( int a, int b){
-	adjMatrix = new int [a*b];
+/*
+void Graph::loadGraphList(string name, int a, int b){
+	adjList = new int [a*b];
 	nodes = a;
 	for (int i = 0; i < a*b; i++)
 		adjList[i] = 0;
@@ -79,6 +80,27 @@ void Graph::loadGraphList( int a, int b){
 		} else {
 			cout << "Unable to open file";
 		}
+}
+*/
+
+
+void Graph::loadGraphList(string name, int a, int b){
+    adjList = new vector<int>[a];
+    nodes = a;
+    string line;
+    ifstream lee (name);
+    int u, v;
+    if (lee.is_open()){
+        while (getline(lee, line)){
+            u = stoi(line.substr(1,1));
+            v = stoi(line.substr(4,1));
+            addEdgeAdjList(u,v);
+        }
+        lee.close(); // Closes the file
+    } else {
+        cout << "Unable to open file";
+    }
+    sortAdjList();
 }
 
 
